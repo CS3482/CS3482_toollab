@@ -1,0 +1,5 @@
+*.o
+ngramslow
+ngramstl
+ngramfast
+shakespeare*
