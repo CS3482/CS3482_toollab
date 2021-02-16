@@ -2,8 +2,11 @@
  * Rules:
  * 1) No global variables. Any data structure that you need to add must be
  *    added to the class declaration in NgramFast.h
- * 2) No new classes. You can only modify the Ngrams class. (Trust me, I'm making
- *    your task easier with this requirement.)
+ * 2) You can add one or two new classes if you like. However, it is certainly
+ *    possible and easier to just modify this class. Take a look at how a 
+ *    data structure is used in NgramSlow.  That's the wrong data structure for
+ *    the problem, but it does show how a type can be defined and used in
+ *    the class.
  * 3) No functions.  You can add methods to the Ngrams class, but you can
  *    not add functions that are not within the class.
  * 4) No use of the C++ standard template library, except for the WordList class.

@@ -124,7 +124,7 @@ void usage(int argc, char * argv[], int & ngrams, bool & reverse,
       {
          ngrams = atoi(argv[i+1]); 
          i++;
-         if (ngrams == 0) printUsage();
+         if (ngrams == 0 || ngrams < 1 || ngrams > 8) printUsage();
       } else if (strcmp(argv[i], "-r") == 0)
       {
          reverse = true;
@@ -152,7 +152,7 @@ void usage(int argc, char * argv[], int & ngrams, bool & reverse,
 void printUsage()
 {
    std::cout << "usage: [-n <ngram size>] [-r | -b] <filename>\n";
-   std::cout << "  <ngram size> indicates the size of the ngrams to build\n";
+   std::cout << "  <ngram size> indicates the size of the ngrams to build (1 to 8)\n";
    std::cout << "  -r print ngrams in reverse order (largest number first)\n";
    std::cout << "  -b print ngrams first in forward direction and then in reverse\n";
    std::cout << "  default: 2 ngrams are built and output in increasing order\n";
