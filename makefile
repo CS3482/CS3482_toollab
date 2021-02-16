@@ -1,9 +1,11 @@
 CC = g++ 
+#FLAGS that allow debugging and profiling
 CFLAGSNOOPT = $(PFLAG) -c -std=c++11 -g
+#FLAGS to use to get the most accurate timing
 CFLAGSOPT = -c -std=c++11 -O2
 #when you are ready to test the timing of your code, set
 #CFLAGS to CFLAGSOPT
-CFLAGS = $(CFLAGSOPT)
+CFLAGS = $(CFLAGNOSOPT)
 OBJS = Ngrams.o WordList.o main.o
 LFLAGS = $(PFLAG)
 
