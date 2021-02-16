@@ -5,7 +5,7 @@ CFLAGSNOOPT = $(PFLAG) -c -std=c++11 -g
 CFLAGSOPT = -c -std=c++11 -O2
 #when you are ready to test the timing of your code, set
 #CFLAGS to CFLAGSOPT
-CFLAGS = $(CFLAGNOSOPT)
+CFLAGS = $(CFLAGSNOOPT)
 OBJS = Ngrams.o WordList.o main.o
 LFLAGS = $(PFLAG)
 
