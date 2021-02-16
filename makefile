@@ -1,5 +1,9 @@
 CC = g++ 
-CFLAGS = $(PFLAG) -c -std=c++11 -g
+CFLAGSNOOPT = $(PFLAG) -c -std=c++11 -g
+CFLAGSOPT = -c -std=c++11 -O2
+#when you are ready to test the timing of your code, set
+#CFLAGS to CFLAGSOPT
+CFLAGS = $(CFLAGSOPT)
 OBJS = Ngrams.o WordList.o main.o
 LFLAGS = $(PFLAG)
 
