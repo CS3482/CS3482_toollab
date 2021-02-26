@@ -90,9 +90,15 @@ def checkIfSorted(inputFile):
        print("\n" + u'\u166D' + " Output file is empty. Likely your program seg faults. ");
        print("Result can be found in " + tmpdir);
        sys.exit(0);
-    
-    fileHandle = open(inputFile + ".output", "r");
-    lines = fileHandle.readlines();
+   
+    try: 
+       fileHandle = open(inputFile + ".output", "r");
+       lines = fileHandle.readlines();
+    except Exception: 
+       print("\n" + u'\u166D' + " Output file contains bad data. Likely your program seg faults. ");
+       print("Result can be found in " + tmpdir);
+       sys.exit(0);
+
     prevCount=0;
     print("Checking order of ngrams in " + inputFile + ".output");
     for line in lines:
